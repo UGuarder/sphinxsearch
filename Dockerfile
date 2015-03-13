@@ -16,9 +16,6 @@ RUN rpm -Uhv http://sphinxsearch.com/files/sphinx-2.2.7-1.rhel7.x86_64.rpm
 # expose ports
 EXPOSE 9306 9312
 
-ADD time_to_log.sh /
-RUN chmod +x /time_to_log.sh
-
 RUN mkdir -p /var/lock/subsys
 
 RUN rm -rf /etc/sphinx
